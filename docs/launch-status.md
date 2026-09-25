@@ -12,12 +12,13 @@ Last updated: 2026-09-25. Setup is in progress; no external prospect outreach is
 | HubSpot Free account | Connected; Avery's WES-18 evidence reports synthetic create/read/update and repeat import with zero new records. Full role handoff acceptance remains pending |
 | HubSpot automatic company creation | Turned off in the account UI after the test exposed an extra unmanaged company; saved confirmation observed. Bounded contact-association follow-up assigned to Avery |
 | Microsoft 365 account in Zapier | User consent completed |
-| Sales mailbox draft tools | Harper created one synthetic draft through the approved gateway; provider returned isDraft=true. Action fixes the shared mailbox, but null from/sender response fields leave direct mailbox read-back pending |
+| Sales mailbox draft tools | Harper created one synthetic draft through the approved gateway; provider returned isDraft=true. Root verified exactly one matching unsent draft in the shared mailbox's Outlook Drafts folder |
 | Sales inbox reader | Fixed GET as Westy returned HTTP 200 from Microsoft with the configured shared-inbox path |
 | Zapier-to-Paperclip connection | Connected. Personal credential metadata defect repaired without rotating the token or widening access; see repair record |
 | Meetings | Owner chose requests only; no calendar writing |
 | Support pricing | Custom quote after discovery; no approved standard pricebook |
 | Prospect sending | Disabled; no send tools or campaign activated |
+| Outgoing sender alias | Future acceptance needed: the requested sales@8westit.com mailbox opens with primary address sales@8westventures.com in Outlook. Do not infer the final From identity from successful draft creation |
 | Offline portable-record checks | 10 tests passed; three synthetic regional fixtures validated and excluded from production records |
 | Runtime instruction alignment | Westy reports consolidating all seven managed instruction files and reconciling the repository process reference. Repository edits still do not automatically deploy to runtime |
 

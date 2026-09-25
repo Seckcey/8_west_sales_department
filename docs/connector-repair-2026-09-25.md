@@ -30,6 +30,8 @@ The native draft tool expects recipient arrays. Paperclip's current test form su
 
 On September 25 at 12:26 UTC, Harper created exactly one synthetic draft through the approved Paperclip gateway. The provider returned `isDraft: true`, a draft identifier, parent-folder identifier and Outlook link, with `qa-sd@example.com` as the sole recipient. Nothing was sent. Private provider identifiers remain in WES-25 rather than this public repository.
 
-The action is configured for `sales@8westit.com`. The creation response returned null `from` and `sender` fields, so that response alone does not prove the draft's mailbox or final From address. Direct mailbox read-back remains a separate acceptance item.
+The action is configured for `sales@8westit.com`. The creation response returned null `from` and `sender` fields. Root then opened that shared mailbox in Outlook and verified its Drafts folder contained exactly one message with the expected synthetic subject, recipient and body; Sent Items showed zero items. Mailbox placement and unsent state are therefore verified separately from the creation response. The test draft remains in place.
+
+Outlook resolves `sales@8westit.com` to a mailbox whose displayed primary address is `sales@8westventures.com`. This does not prevent the verified shared-mailbox read/draft workflow. Before enabling any future sending, verify the intended From alias; the null provider fields do not establish the outgoing sender identity.
 
 Three agent attempts failed with `acpx_turn_failed` before reaching Outlook after loading the deferred tool. The successful attempt used Paperclip's existing HTTP tool gateway under Harper's own temporary session and the same connection grants. This was not a direct provider call or a permission bypass. The deferred-tool failure and test-form array handling remain upstream issues; the supported gateway route is the verified working path.
