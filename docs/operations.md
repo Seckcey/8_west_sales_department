@@ -12,9 +12,13 @@
 
 The runtime and database are separate persistent services. Read the host's private `OPERATIONS.md` before maintenance. Do not copy `.env`, database storage, instruction runtime exports or backups into this public repository. Windows Docker Desktop is not part of this deployment.
 
+The Outlook connection required a scoped saved-credential repair on September 25, 2026. See [the repair and retest requirements](connector-repair-2026-09-25.md). Private maintenance evidence and the guarded transaction are under the app's `maintenance/` directory. Reconnecting or rotating this credential requires retesting the agent path.
+
 ## Normal review
 
 Review tasks requiring owner decisions; overdue next actions; records missing sources; duplicates; replies and opt-outs; proposal gaps; failed runs; subscription/tool usage; and the current connector grants. Report real prospects separately from synthetic tests. Zero activity is a valid result, not a reason to fabricate progress.
+
+HubSpot's **Create and associate Companies with Contacts** setting is off. Avery manages explicit company matching and associations; automatic domain-based company creation produced an unmanaged test record during acceptance. Count department-owned records only when their stable department ID is present, and exclude synthetic records. Preserve unrelated records.
 
 ## Pause or incident
 
