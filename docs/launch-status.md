@@ -8,7 +8,7 @@ Last updated: 2026-09-25. Setup is in progress; no external prospect outreach is
 | Seven-agent roster | Created with role instructions and Claude subscription adapter |
 | All specialist workflow tests | In progress; execution and output review still required |
 | Department playbooks | Initial documents created; remaining specialist deliverables in progress |
-| GitHub repository | Versioned role contracts, playbook, architecture, operations and offline checks prepared for publication |
+| GitHub repository | Published on main; GitHub validation passed at initial commit d082ad0 |
 | HubSpot Free account | Connected through regional MCP endpoint; live get_user_details as Westy succeeded; record writes and dedupe acceptance pending |
 | Microsoft 365 account in Zapier | User consent completed |
 | Sales mailbox draft tools | Configured with fixed shared mailbox; live call not yet verified |

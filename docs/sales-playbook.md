@@ -18,12 +18,14 @@ Write for one business and one relevant topic. Use verified facts and avoid impl
 
 English starter, for internal customization:
 
-> Subject: IT support for [business]  
+> Subject: IT support for [business]
+>
 > Hello [name], I'm reaching out from 8 West IT. We help small businesses with everyday IT support, Microsoft 365 and network needs. [One accurate, sourced reason this may be relevant.] Would you be open to discussing your current setup? We can prepare a custom quote after understanding the scope. If you prefer no further contact, please let us know.
 
 Spanish starter, for internal customization:
 
-> Asunto: Soporte de TI para [empresa]  
+> Asunto: Soporte de TI para [empresa]
+>
 > Hola [nombre]: Le escribo de 8 West IT. Ayudamos a pequeñas empresas con soporte de TI, Microsoft 365 y redes. [Un motivo relevante y verificado.] ¿Le interesaría conversar sobre sus necesidades? Podemos preparar una cotización después de definir el alcance. Si prefiere no recibir más mensajes, indíquenoslo.
 
 These are unfinished drafts. Before sending, add the verified sender identity and required business/address/disclosure details, remove placeholders, confirm the applicable outreach requirements and record campaign approval. The Spanish wording does not promise Spanish-language service delivery.
