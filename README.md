@@ -4,6 +4,8 @@ The operating system for the 8 West IT sales team, managed in [Paperclip](https:
 
 **Launch status: implementation and internal acceptance are in progress. This repository is not evidence that external outreach is enabled.** See [current status](docs/launch-status.md).
 
+For the dated owner handoff, see the [September 25 launch report](docs/launch-report-2026-09-25.md). Shared platform deployment guidance lives in the [Paperclip operations repository](https://github.com/Seckcey/paperclip).
+
 ## Team
 
 | Agent | Responsibility |
