@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*token*.json
+runtime/
+private/
+exports/
+__pycache__/
+*.pyc
+.DS_Store

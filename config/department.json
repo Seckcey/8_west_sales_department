@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "name": "8 West IT Sales",
+  "orchestrator": "paperclip",
+  "territories": ["San Diego", "Los Angeles", "Baja California"],
+  "runtime": {
+    "adapter": "claude_local",
+    "funding": "responsible_user_subscription",
+    "paid_api_fallback": false,
+    "scheduled_heartbeats": false,
+    "max_concurrent_runs_per_agent": 1,
+    "max_simultaneous_specialists": 1,
+    "max_turns_per_specialist_run": 40
+  },
+  "agents": [
+    {"name": "Westy", "role": "sales_manager", "reports_to": "owner", "instructions": "agents/westy.md"},
+    {"name": "Scout", "role": "prospect_research", "reports_to": "Westy", "instructions": "agents/scout.md"},
+    {"name": "Quinn", "role": "qualification", "reports_to": "Westy", "instructions": "agents/quinn.md"},
+    {"name": "Harper", "role": "outreach_content", "reports_to": "Westy", "instructions": "agents/harper.md"},
+    {"name": "Riley", "role": "reply_and_discovery", "reports_to": "Westy", "instructions": "agents/riley.md"},
+    {"name": "Morgan", "role": "solutions_and_proposals", "reports_to": "Westy", "instructions": "agents/morgan.md"},
+    {"name": "Avery", "role": "sales_operations", "reports_to": "Westy", "instructions": "agents/avery.md"}
+  ],
+  "capability_intent": {
+    "crm": {"provider": "hubspot", "agents": ["Westy", "Avery"], "actions": ["read", "create", "update"], "delete": false},
+    "mail": {"provider": "microsoft365_via_zapier", "mailbox": "sales@8westit.com", "agents": ["Westy", "Harper", "Riley"], "actions": ["read_sales_inbox", "create_draft", "create_reply_draft"], "send": false},
+    "calendar": {"mode": "meeting_requests_only", "write": false},
+    "commercial": {"pricing": "custom_quote_after_discovery", "commitments": "owner_approval"}
+  }
+}
