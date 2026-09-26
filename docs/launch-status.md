@@ -2,13 +2,14 @@
 
 Last updated: 2026-09-26 UTC. Setup is in progress; no external prospect outreach is enabled.
 
-The [Quinn incident investigation](quinn-runner-incident-2026-09-26.md) traced the failed runs to a Claude authentication category and identified a likely access-token lifetime problem in the installed runtime. Authentication recovery and the sequential specialist handoffs remain pending. Coastline's urgent disk hold has cleared; an isolated SQL backup restore passed with matching sales-state checks, and its test resources were removed. The coordinator released scoped reconnect; the failed off-host backup pack remains a separate gap. No runner fix or new provider acceptance is claimed by this documentation update.
+The [Quinn incident investigation](quinn-runner-incident-2026-09-26.md) traced the failed runs to a Claude authentication category and identified a likely access-token lifetime problem in the installed runtime. The existing Claude subscription reconnected at 03:23:08 UTC, preserving identity/permissions and advancing the credential to version 2. Quinn's recovery run succeeded at 03:38:17 UTC; independent arithmetic, duplicate and history checks passed on its revised qualification document. WES-14 still needs the authoritative rubric publication and score-history handoff, and later specialists remain held. The classic editor unexpectedly auto-saved a reformatted v2.1.0 rubric on opening; the original was restored byte-for-byte into revision 6 and the original interface restored. Exact v2.2.0 publication needs a supported owner/admin path. An unexpected historical follow-on request was cancelled without deliverable changes; other deferred requests are preserved for review. Current access is restored, but durable token refresh is not repaired. Coastline's isolated SQL restore passed; the failed off-host backup pack remains a separate gap.
 
 | Item | Evidence state |
 |---|---|
 | Paperclip deployment | Running on Coastline, public authenticated UI |
 | Seven-agent roster | Created with role instructions and Claude subscription adapter |
-| All specialist workflow tests | Scout's WES-13 is done; Quinn's WES-14 is stalled after three authentication-category failures; WES-15 through WES-18 remain blocked. Resume and output review still required |
+| Claude subscription recovery | Existing connection reconnected and provider validation passed on September 26; same personal owner/grant/default, credential version 1 to 2. Automatic refresh persistence is not fixed |
+| All specialist workflow tests | Scout's WES-13 is done; Quinn's recovery run succeeded with qualification revision 3 and prepared rubric revision 2 reviewed. WES-14 remains in progress pending authoritative publication/score history; WES-15 through WES-18 remain blocked. The fifth synthetic fixture is still needed for actual lost-route acceptance |
 | Department playbooks | Initial documents created; remaining specialist deliverables in progress |
 | GitHub repository | Published on main; GitHub checks validate the portable records. Repository publication does not deploy the runtime or prove live handoff acceptance |
 | HubSpot Free account | Connected; Avery's WES-18 evidence reports synthetic create/read/update and repeat import with zero new records. Full role handoff acceptance remains pending |
