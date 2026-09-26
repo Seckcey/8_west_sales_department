@@ -22,6 +22,8 @@ HubSpot's **Create and associate Companies with Contacts** setting is off. Avery
 
 ## Pause or incident
 
+For Quinn's September 25 `acpx_turn_failed` runs, see the [runner incident and recovery sequence](quinn-runner-incident-2026-09-26.md). The installed runner's `terminal access failure` message reports a Claude authentication category, not shell permissions. Verify the exact failure and the host maintenance window before retrying; saved connection health is not a fresh authentication check.
+
 1. Stop the affected Paperclip run and disable its routine or connection. Preserve the task, error category and timestamp.
 2. If a message send result is uncertain, inspect the provider's sent state before retrying. Never resend merely because the response was lost.
 3. An opt-out immediately stops all outreach to that address. Preserve the minimum suppression evidence; do not treat a reopened deal as renewed permission.
