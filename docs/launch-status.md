@@ -1,14 +1,16 @@
 # Launch acceptance
 
-Last updated: 2026-09-25. Setup is in progress; no external prospect outreach is enabled.
+Last updated: 2026-09-26 UTC. Setup is in progress; no external prospect outreach is enabled.
+
+The [Quinn incident investigation](quinn-runner-incident-2026-09-26.md) traced the failed runs to a Claude authentication category and identified a likely access-token lifetime problem in the installed runtime. Authentication recovery and the sequential specialist handoffs remain pending. Coastline's urgent disk hold has cleared; an isolated SQL backup restore passed with matching sales-state checks, and its test resources were removed. The coordinator released scoped reconnect; the failed off-host backup pack remains a separate gap. No runner fix or new provider acceptance is claimed by this documentation update.
 
 | Item | Evidence state |
 |---|---|
 | Paperclip deployment | Running on Coastline, public authenticated UI |
 | Seven-agent roster | Created with role instructions and Claude subscription adapter |
-| All specialist workflow tests | In progress; execution and output review still required |
+| All specialist workflow tests | Scout's WES-13 is done; Quinn's WES-14 is stalled after three authentication-category failures; WES-15 through WES-18 remain blocked. Resume and output review still required |
 | Department playbooks | Initial documents created; remaining specialist deliverables in progress |
-| GitHub repository | Published on main; GitHub validation passed at initial commit d082ad0 |
+| GitHub repository | Published on main; GitHub checks validate the portable records. Repository publication does not deploy the runtime or prove live handoff acceptance |
 | HubSpot Free account | Connected; Avery's WES-18 evidence reports synthetic create/read/update and repeat import with zero new records. Full role handoff acceptance remains pending |
 | HubSpot automatic company creation | Turned off in the account UI after the test exposed an extra unmanaged company; saved confirmation observed. Bounded contact-association follow-up assigned to Avery |
 | Microsoft 365 account in Zapier | User consent completed |
