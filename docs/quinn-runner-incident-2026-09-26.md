@@ -47,7 +47,7 @@ The failed run performed further preparation after some of these publications. R
 
 ## Supported recovery and its limits
 
-1. Obtain a refreshed host-capacity window from the backup/host owner. At inspection Coastline root was 95% used with about 25 GiB available. The superintendent reported an active protected backup sync and failed Paperclip backup packing, and placed live runner starts on hold. Do not touch backup staging, restart services, build containers or make large test copies to work around that hold.
+1. Obtain a refreshed host-capacity and recovery-baseline window from the backup/host owner. Coastline initially reached 95% used with about 25 GiB available. After the protected sync finished and its cleanup ran around 02:35 UTC, a fresh check showed 86% used and 63 GiB available. The urgent capacity hold was lifted, but this sync's Paperclip pack failed. The coordinator requires a reviewed recovery baseline before reconnect or live runs. Do not touch backup staging, restart services or repair/retry the separate backup job as part of runner recovery.
 2. After the shared-operation hold permits authentication recovery, sign in to Paperclip as the owner of **My Claude subscription**. Open **Apps**, select that existing connection and use **Reconnect** in its AI account controls. Keep the existing subscription method, personal owner, connection target, agent grants and default selection. Do not revoke the identity, create a duplicate connection or select a paid API fallback.
 3. The local-environment flow creates an isolated sign-in attempt and displays its exact `CLAUDE_CONFIG_DIR` / `claude auth login` command. Run that generated command as the application user in the existing Paperclip environment on Coastline. It must run in the same filesystem context as Paperclip, not on the Windows desktop. Complete the provider's normal browser sign-in/MFA when requested. Never paste tokens, authorization codes or login URLs into GitHub or routine task comments.
 4. Return to the connection flow, allow its verification to become ready, then choose **Connect**. The installed check calls Anthropic's usage endpoint before saving. Verify that the original connection/grant and intended scope are preserved. A successful reconnect proves only credential acceptance at that time; it does not pass Quinn or the handoffs.
@@ -56,6 +56,16 @@ The failed run performed further preparation after some of these publications. R
 The reconnect path is verified from `ManagedAiConnectionDetails.tsx`, `AiConnectionAccountControls.tsx`, `AiConnectionCredentialStep.tsx`, `useLocalAiLogin.ts`, and the installed local-login routes/services. It has **not been executed or accepted in this investigation**. Opening the reconnect flow itself creates a login attempt; it is not a read-only status check.
 
 A fresh local sign-in may restore a limited work window, but it still imports only the access token in this installed version. It does not repair refresh persistence or prove durable unattended operation. A permanent upstream credential-lifecycle repair or a different officially supported subscription sign-in method needs separate source review, isolated validation and an authorized release. Never copy another application's credentials or silently change the funding source.
+
+### Recovery baseline and stop conditions
+
+The app-managed hourly backup `paperclip-20260926-021611.sql.gz` is 7,981,449 bytes. Its gzip integrity check passed. The decompressed stream identifies the Paperclip JavaScript backup format, was created at 02:16:11.722 UTC, contains 211 table definitions and 10,261 inserts, and ends with `COMMIT` and the expected statement delimiter. This matches the installed `packages/db/src/backup-lib.ts` writer. The original protected instance master-key file exists; its contents were not read or exported.
+
+This establishes fresh same-host backup material, stream integrity and a necessary decryption prerequisite. It does **not** prove a successful database restore, a complete filesystem recovery, or an off-host copy. The failed shared backup pack remains a separate recovery gap. An isolated restore, if required, must use a separate database/volume with no application or outbound access and be stopped afterward; never restore over the live database as a test.
+
+Reconnection updates the existing encrypted credential version, connection health metadata and scoped login-attempt state. It must preserve the connection, grant, agent grants and default identity, and does not require rewriting business documents. Inspect those identities before and after. A failed reconnect must not trigger deletion/recreation of the connection or a whole-database rollback. Stop and preserve the error without exposing credentials. Do not restore a known-invalid old credential merely to make metadata look unchanged.
+
+After successful authentication, the first Quinn run is one bounded fresh attempt on WES-14. Stop on authentication failure, changed permissions/provider, unexpected external action, or an unresolved handoff dependency. Keep document revisions for targeted recovery. Do not automatically advance Harper until Quinn's actual publication and handoff have been reviewed.
 
 ## Sequential handoff acceptance
 
@@ -79,7 +89,7 @@ Keep `send:false`, scheduled heartbeats off, opt-outs intact and unrelated recor
 | --- | --- |
 | Read-only diagnosis | Typed authentication failure and credential-lifecycle weakness traced; exact provider rejection reason unknown |
 | Offline records | Existing 10 unit tests passed; all three regional fixtures validated with zero production records. These checks do not test live runner authentication |
-| Host | Origin health passed; live operations held by backup/disk owner |
+| Host | Origin health passed; capacity recovered to 86% / 63 GiB; same-host backup integrity checked, restore unproven, reviewed recovery baseline still required |
 | Provider | Reconnect and fresh credential acceptance not performed |
 | Specialist chain | Scout previously done; the five steps from Quinn through Avery are not accepted by this investigation |
 | Owner / outreach | No new authorization; prospect sending remains disabled |
