@@ -10,7 +10,7 @@ The [Quinn incident investigation](quinn-runner-incident-2026-09-26.md) traced t
 | Seven-agent roster | Created with role instructions and Claude subscription adapter |
 | All specialist workflow tests | Scout's WES-13 is done; Quinn's WES-14 is stalled after three authentication-category failures; WES-15 through WES-18 remain blocked. Resume and output review still required |
 | Department playbooks | Initial documents created; remaining specialist deliverables in progress |
-| GitHub repository | Published on main; GitHub validation passed at initial commit d082ad0 |
+| GitHub repository | Published on main; GitHub checks validate the portable records. Repository publication does not deploy the runtime or prove live handoff acceptance |
 | HubSpot Free account | Connected; Avery's WES-18 evidence reports synthetic create/read/update and repeat import with zero new records. Full role handoff acceptance remains pending |
 | HubSpot automatic company creation | Turned off in the account UI after the test exposed an extra unmanaged company; saved confirmation observed. Bounded contact-association follow-up assigned to Avery |
 | Microsoft 365 account in Zapier | User consent completed |

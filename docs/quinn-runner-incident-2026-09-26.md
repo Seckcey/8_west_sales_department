@@ -39,6 +39,7 @@ WES-14 remains `in_progress`, despite no queued or running agent at inspection. 
 
 | Document key | Revision at inspection | Updated UTC, September 25 |
 | --- | --- | --- |
+| `continuation-summary` | 5 | 18:43:52 |
 | `dryrun-qualification` | 2 | 17:58:20 |
 | `rubric-v220-body` | 1 | 18:37:19 |
 | `rubric-v220-ruling` | 1 | 18:21:40 |
