@@ -2,7 +2,7 @@
 
 Last updated: 2026-09-26 UTC. Setup is in progress; no external prospect outreach is enabled.
 
-The [Quinn incident investigation](quinn-runner-incident-2026-09-26.md) traced the failed runs to a Claude authentication category and identified a likely access-token lifetime problem in the installed runtime. Authentication recovery and the sequential specialist handoffs remain pending. Coastline's urgent disk hold has cleared; fresh same-host backup integrity passed, but restore remains unproven and the failed off-host pack is a separate gap. The coordinator is reviewing the recovery baseline before live operations. No runner fix or new provider acceptance is claimed by this documentation update.
+The [Quinn incident investigation](quinn-runner-incident-2026-09-26.md) traced the failed runs to a Claude authentication category and identified a likely access-token lifetime problem in the installed runtime. Authentication recovery and the sequential specialist handoffs remain pending. Coastline's urgent disk hold has cleared; an isolated SQL backup restore passed with matching sales-state checks, and its test resources were removed. The coordinator released scoped reconnect; the failed off-host backup pack remains a separate gap. No runner fix or new provider acceptance is claimed by this documentation update.
 
 | Item | Evidence state |
 |---|---|
